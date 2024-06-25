@@ -73,7 +73,7 @@ api_token <- "trotskitueleski$1917"
 
 # modelisation
 # library(MASS)
-df3=df%>%select(surf,cs1,ur,couple,aged)%>%filter(surf!="Z")
+df3=df%>%dplyr::select(surf,cs1,ur,couple,aged)%>%filter(surf!="Z")
 df3[,1]=factor(df3$surf, ordered = T)
 df3[,"cs1"]=factor(df3$cs1)
 df3 %>% 
